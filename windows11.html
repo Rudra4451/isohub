@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Windows 11 — ISO Hub</title>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">ISO Hub</a>
+  <ul class="nav-links">
+    <li><a href="index.html#os">Download</a></li>
+    <li><a href="index.html#guide">How-To Guide</a></li>
+    <li><a href="index.html#compare">Compare OS</a></li>
+    <li><a href="index.html#faq">FAQ</a></li>
+  </ul>
+  <a class="nav-cta" href="index.html">← Back Home</a>
+</nav>
+
+<div class="page-hero">
+  <div class="hero-glow"></div>
+  <div class="os-icon win" style="margin:0 auto 1rem">🪟</div>
+  <span class="section-tag">Microsoft — Official</span>
+  <h1>Windows 11</h1>
+  <p>The latest Microsoft operating system. Modern, secure, and built for new hardware.</p>
+</div>
+
+<div class="page-content">
+  <a class="back-link" href="index.html">← Back to all downloads</a>
+
+  <h2 class="section-title" style="font-size:1.5rem;margin-bottom:1rem">System Requirements</h2>
+  <div class="req-grid">
+    <div class="req-card"><div class="req-icon">🧠</div><div class="req-label">RAM</div><div class="req-value">4 GB minimum</div></div>
+    <div class="req-card"><div class="req-icon">💾</div><div class="req-label">Storage</div><div class="req-value">64 GB minimum</div></div>
+    <div class="req-card"><div class="req-icon">⚡</div><div class="req-label">Processor</div><div class="req-value">1 GHz, 2+ cores</div></div>
+    <div class="req-card"><div class="req-icon">🖥</div><div class="req-label">Display</div><div class="req-value">720p, 9" minimum</div></div>
+    <div class="req-card"><div class="req-icon">🔐</div><div class="req-label">TPM</div><div class="req-value">Version 2.0 required</div></div>
+    <div class="req-card"><div class="req-icon">🔒</div><div class="req-label">Secure Boot</div><div class="req-value">UEFI required</div></div>
+  </div>
+
+  <div class="info-box">
+    <strong>⚠ Important:</strong> Windows 11 requires TPM 2.0 and Secure Boot. If your PC is older than ~2017, it may not be compatible. In that case, consider <a href="windows10.html" style="color:var(--accent2)">Windows 10</a> or <a href="mint.html" style="color:var(--accent2)">Linux Mint</a> instead.
+  </div>
+
+  <h2 class="section-title" style="font-size:1.5rem;margin:2rem 0 1rem">Download Options</h2>
+  <div class="dl-options">
+    <div class="dl-option">
+      <div class="dl-option-info">
+        <div class="dl-name">🔧 Media Creation Tool (Recommended)</div>
+        <div class="dl-detail">Downloads the latest version and creates a bootable USB automatically. Easiest method.</div>
+      </div>
+      <a class="dl-link win" href="https://www.microsoft.com/software-download/windows11" target="_blank" rel="noopener">↗ Go to Microsoft</a>
+    </div>
+    <div class="dl-option">
+      <div class="dl-option-info">
+        <div class="dl-name">💿 Download ISO Directly</div>
+        <div class="dl-detail">Download the raw ISO file. You'll then use Rufus or balenaEtcher to flash it to USB yourself.</div>
+      </div>
+      <a class="dl-link win" href="https://www.microsoft.com/software-download/windows11" target="_blank" rel="noopener">↗ Go to Microsoft</a>
+    </div>
+  </div>
+
+  <h2 class="section-title" style="font-size:1.5rem;margin:2.5rem 0 1rem">How to Install Windows 11</h2>
+  <ul class="steps-list">
+    <li><div class="step-num">1</div><div class="step-text"><strong>Download</strong> the Media Creation Tool or ISO from Microsoft's official site above.</div></li>
+    <li><div class="step-num">2</div><div class="step-text">Plug in a <strong>USB drive (8 GB+)</strong>. Use Rufus or the Media Creation Tool to write the installer to it.</div></li>
+    <li><div class="step-num">3</div><div class="step-text"><strong>Back up your files</strong> to an external drive or cloud. The install will erase your selected drive.</div></li>
+    <li><div class="step-num">4</div><div class="step-text">Restart and press <strong>F2, F12, DEL, or ESC</strong> to enter your BIOS/boot menu. Boot from the USB.</div></li>
+    <li><div class="step-num">5</div><div class="step-text">Follow the setup wizard. Choose <strong>"Custom: Install Windows only"</strong> for a clean install.</div></li>
+    <li><div class="step-num">6</div><div class="step-text">Wait 15–30 minutes. Your PC will restart a few times — this is normal. Remove the USB when done!</div></li>
+  </ul>
+
+  <div class="info-box" style="margin-top:2rem">
+    <strong>💡 Tip:</strong> If you don't have a product key, you can skip it during install and Windows 11 will still work with minor cosmetic limitations (you can add the key later in Settings).
+  </div>
+</div>
+
+<footer>
+  <div class="footer-logo">ISO Hub</div>
+  <p class="footer-text">Your one-stop resource for official OS downloads and installation guides.</p>
+  <div class="footer-links">
+    <a href="index.html">Home</a>
+    <a href="windows11.html">Windows 11</a>
+    <a href="windows10.html">Windows 10</a>
+    <a href="ubuntu.html">Ubuntu</a>
+    <a href="mint.html">Linux Mint</a>
+    <a href="macos.html">macOS</a>
+  </div>
+  <div class="footer-bottom">© 2025 ISO Hub — Downloads redirect to official sources. Not affiliated with Microsoft.</div>
+</footer>
+</body>
+</html>
