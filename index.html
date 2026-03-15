@@ -257,17 +257,6 @@
   <div class="footer-bottom">© 2025 ISO Hub — All downloads redirect to official sources. Not affiliated with Microsoft, Canonical, or Apple.</div>
 </footer>
 
-<script>
-  function toggleFaq(btn) {
-    const ans = btn.nextElementSibling;
-    const isOpen = ans.classList.contains('open');
-    document.querySelectorAll('.faq-a.open').forEach(a => a.classList.remove('open'));
-    document.querySelectorAll('.faq-q.open').forEach(q => q.classList.remove('open'));
-    if (!isOpen) { ans.classList.add('open'); btn.classList.add('open'); }
-  }
-  const io = new IntersectionObserver(entries =>
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
+<script src="/isohub/script.js"></script>
 </body>
 </html>
