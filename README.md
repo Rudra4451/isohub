@@ -1,4 +1,4 @@
-ISO Hub
+#ISO Hub
 
 ISO Hub is a lightweight website that helps users find official operating system ISO downloads and learn how to install them.
 Instead of hosting files, the site redirects users to the official sources such as Microsoft, Canonical, or Fedora.
@@ -77,7 +77,7 @@ ISO Hub does not host any ISO files.
 
 Clone the repository:
 
-git clone https://github.com/yourusername/isohub.git
+git clone https://github.com/rudra4451/isohub.git
 
 Open the project folder and launch:
 
