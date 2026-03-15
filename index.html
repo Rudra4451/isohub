@@ -1,276 +1,303 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>ISO Hub — Find &amp; Install Any OS</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ISO Hub — Find & Install Any OS</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
 </head>
+
 <body>
 
 <nav>
-  <a class="nav-logo" href="index.html">ISO Hub</a>
-  <ul class="nav-links">
-    <li><a href="#os">Download</a></li>
-    <li><a href="#distros">More Distros</a></li>
-    <li><a href="#guide">How-To Guide</a></li>
-    <li><a href="#compare">Compare OS</a></li>
-    <li><a href="#faq">FAQ</a></li>
-  </ul>
-  <a class="nav-cta" href="#os">Get Started →</a>
+
+<a class="nav-logo" href="index.html">ISO Hub</a>
+
+<ul class="nav-links">
+<li><a href="#os">Download</a></li>
+<li><a href="#distros">More Distros</a></li>
+<li><a href="#guide">How-To Guide</a></li>
+<li><a href="#compare">Compare OS</a></li>
+<li><a href="#faq">FAQ</a></li>
+</ul>
+
+<a class="nav-cta" href="#os">Get Started →</a>
+
 </nav>
 
+
 <header class="hero">
-  <div class="hero-glow"></div>
-  <span class="section-tag">100% Official Sources</span>
-  <h1>Find &amp; Install Any OS<br/><span class="gradient-text">Without the Headache</span></h1>
-  <p class="hero-sub">Download ISO files from official sources and learn how to install any operating system step by step — all in one place.</p>
-  <div class="hero-btns">
-    <a class="btn-primary" href="#os">⬇ Browse Downloads</a>
-    <a class="btn-secondary" href="#guide">📖 Installation Guide</a>
-  </div>
-  <div class="search-box">
-  <input type="text" id="osSearch" placeholder="Search operating systems..." />
+
+<div class="hero-glow"></div>
+
+<span class="section-tag">100% Official Sources</span>
+
+<h1>
+Find & Install Any OS<br>
+<span class="gradient-text">Without the Headache</span>
+</h1>
+
+<p class="hero-sub">
+Download ISO files from official sources and learn how to install any operating system step by step.
+</p>
+
+<div class="hero-btns">
+<a class="btn-primary" href="#os">⬇ Browse Downloads</a>
+<a class="btn-secondary" href="#guide">📖 Installation Guide</a>
 </div>
+
+
+<div class="search-box">
+<input type="text" id="osSearch" placeholder="Search operating systems...">
+</div>
+
 </header>
 
-<!-- OS CARDS -->
+
 <section class="section" id="os">
-  <div class="reveal">
-    <span class="section-tag">Official Sources Only</span>
-    <h2 class="section-title">Choose Your Operating System</h2>
-    <p class="section-sub">Every button redirects you to the official download page — no shady mirrors, no bundled software.</p>
-  </div>
-  <div class="os-grid">
 
-    <div class="os-card windows reveal">
-      <div class="card-bar win-bar"></div>
-      <div class="os-icon win">🪟</div>
-      <div class="os-name">Windows 11</div>
-      <div class="os-version">Latest stable — by Microsoft</div>
-      <div class="os-desc">Modern UI, improved performance and built-in security. Best for new hardware with TPM 2.0.</div>
-      <div class="os-tags">
-        <span class="tag blue">64-bit</span>
-        <span class="tag">Desktop</span>
-        <span class="tag orange">TPM 2.0 Required</span>
-      </div>
-      <a class="download-btn btn-win" href="windows11.html">🔗 View Download Options</a>
-    </div>
+<div class="reveal">
 
-    <div class="os-card windows reveal">
-      <div class="card-bar win-bar"></div>
-      <div class="os-icon win">🪟</div>
-      <div class="os-name">Windows 10</div>
-      <div class="os-version">Widely supported — by Microsoft</div>
-      <div class="os-desc">Still the world's most used OS. Runs on older hardware. Great choice for compatibility.</div>
-      <div class="os-tags">
-        <span class="tag blue">32 / 64-bit</span>
-        <span class="tag green">No TPM Needed</span>
-        <span class="tag">Laptop &amp; Desktop</span>
-      </div>
-      <a class="download-btn btn-win" href="windows10.html">🔗 View Download Options</a>
-    </div>
+<span class="section-tag">Official Sources Only</span>
 
-    <div class="os-card ubuntu reveal">
-      <div class="card-bar ubu-bar"></div>
-      <div class="os-icon ubu">🐧</div>
-      <div class="os-name">Ubuntu 24.04 LTS</div>
-      <div class="os-version">Noble Numbat — by Canonical</div>
-      <div class="os-desc">The most beginner-friendly Linux distro. Huge community, excellent hardware support, tons of free software.</div>
-      <div class="os-tags">
-        <span class="tag green">Free</span>
-        <span class="tag purple">LTS Release</span>
-        <span class="tag orange">Beginner Friendly</span>
-      </div>
-      <a class="download-btn btn-ubu" href="ubuntu.html">🔗 View Download Options</a>
-    </div>
+<h2 class="section-title">Choose Your Operating System</h2>
 
-    <div class="os-card macos reveal">
-      <div class="card-bar mac-bar"></div>
-      <div class="os-icon mac">🍎</div>
-      <div class="os-name">macOS Sequoia</div>
-      <div class="os-version">macOS 15 — by Apple</div>
-      <div class="os-desc">Apple's polished and secure OS. Only works on Apple Mac hardware. Download via Mac App Store.</div>
-      <div class="os-tags">
-        <span class="tag purple">Apple Silicon</span>
-        <span class="tag blue">Intel Mac</span>
-        <span class="tag">Mac Only</span>
-      </div>
-      <a class="download-btn btn-mac" href="macos.html">🔗 View Download Options</a>
-    </div>
+<p class="section-sub">
+Every button redirects to the official website — no mirrors or shady downloads.
+</p>
 
-    <div class="os-card linux reveal">
-      <div class="card-bar lin-bar"></div>
-      <div class="os-icon lin">🌿</div>
-      <div class="os-name">Linux Mint 22</div>
-      <div class="os-version">Wilma — by Linux Mint team</div>
-      <div class="os-desc">Feels exactly like Windows. Perfect for switching from Windows. Fast, lightweight and reliable.</div>
-      <div class="os-tags">
-        <span class="tag green">Free</span>
-        <span class="tag orange">Windows-like UI</span>
-        <span class="tag blue">Lightweight</span>
-      </div>
-      <a class="download-btn btn-lin" href="mint.html">🔗 View Download Options</a>
-    </div>
-
-    <div class="os-card linux reveal">
-      <div class="card-bar lin-bar"></div>
-      <div class="os-icon lin">🎩</div>
-      <div class="os-name">Fedora 41</div>
-      <div class="os-version">Workstation — by Red Hat</div>
-      <div class="os-desc">Cutting-edge Linux with the latest software. Ideal for developers and power users who want fresh packages.</div>
-      <div class="os-tags">
-        <span class="tag green">Free</span>
-        <span class="tag purple">Dev Focused</span>
-        <span class="tag blue">GNOME Desktop</span>
-      </div>
-      <a class="download-btn btn-lin" href="https://fedoraproject.org/workstation/download" target="_blank" rel="noopener">🔗 Official Fedora Site ↗</a>
-    </div>
-
-  </div>
-</section>
-
-<!-- MORE DISTROS -->
-<section class="section" id="distros" style="padding-top:0">
-  <div class="reveal">
-    <span class="section-tag">Linux Ecosystem</span>
-    <h2 class="section-title">More Linux Distros</h2>
-    <p class="section-sub">Whether you need speed, security, or simplicity — there's a Linux for every use case.</p>
-  </div>
-  <div class="distro-grid">
-    <a class="distro-card reveal" href="https://archlinux.org/download/" target="_blank" rel="noopener"><div class="distro-logo">⚙️</div><div class="distro-info"><div class="distro-name">Arch Linux</div><div class="distro-use">Advanced users, full control</div></div></a>
-    <a class="distro-card reveal" href="https://www.debian.org/distrib/" target="_blank" rel="noopener"><div class="distro-logo">🌀</div><div class="distro-info"><div class="distro-name">Debian</div><div class="distro-use">Rock solid, servers &amp; desktops</div></div></a>
-    <a class="distro-card reveal" href="https://manjaro.org/download/" target="_blank" rel="noopener"><div class="distro-logo">🟢</div><div class="distro-info"><div class="distro-name">Manjaro</div><div class="distro-use">Arch-based, beginner friendly</div></div></a>
-    <a class="distro-card reveal" href="https://elementary.io/" target="_blank" rel="noopener"><div class="distro-logo">✨</div><div class="distro-info"><div class="distro-name">elementary OS</div><div class="distro-use">Beautiful macOS-style Linux</div></div></a>
-    <a class="distro-card reveal" href="https://zorin.com/os/download/" target="_blank" rel="noopener"><div class="distro-logo">🔷</div><div class="distro-info"><div class="distro-name">Zorin OS</div><div class="distro-use">Perfect for Windows switchers</div></div></a>
-    <a class="distro-card reveal" href="https://pop.system76.com/" target="_blank" rel="noopener"><div class="distro-logo">🚀</div><div class="distro-info"><div class="distro-name">Pop!_OS</div><div class="distro-use">Gaming, NVIDIA, developers</div></div></a>
-    <a class="distro-card reveal" href="https://kali.org/get-kali/" target="_blank" rel="noopener"><div class="distro-logo">🐉</div><div class="distro-info"><div class="distro-name">Kali Linux</div><div class="distro-use">Security &amp; penetration testing</div></div></a>
-    <a class="distro-card reveal" href="https://tails.boum.org/install/" target="_blank" rel="noopener"><div class="distro-logo">🔒</div><div class="distro-info"><div class="distro-name">Tails OS</div><div class="distro-use">Privacy &amp; anonymity</div></div></a>
-  </div>
-</section>
-
-<!-- HOW-TO GUIDE -->
-<div class="alt-bg" id="guide">
-<section class="section" style="padding-top:5rem;padding-bottom:5rem">
-  <div class="reveal">
-    <span class="section-tag">Step-by-Step</span>
-    <h2 class="section-title">How to Change Your OS</h2>
-    <p class="section-sub">Follow these steps to safely install any operating system on your laptop or desktop.</p>
-  </div>
-  <div class="guide-cards">
-    <div class="guide-card reveal"><div class="guide-step">01</div><div class="guide-icon">⬇️</div><div class="guide-title">Download the ISO</div><div class="guide-text">Click any button above. You'll be taken to the official site. Download the ISO file (usually 1–5 GB) and save it somewhere easy to find.</div></div>
-    <div class="guide-card reveal"><div class="guide-step">02</div><div class="guide-icon">💾</div><div class="guide-title">Create a Bootable USB</div><div class="guide-text">Use <strong>Rufus</strong> (Windows) or <strong>balenaEtcher</strong> (Mac/Linux) to write the ISO to a USB drive (8 GB+). This makes the USB into an installer.</div></div>
-    <div class="guide-card reveal"><div class="guide-step">03</div><div class="guide-icon">💽</div><div class="guide-title">Backup Your Files First</div><div class="guide-text">Copy important files to an external drive or cloud storage. A clean install will erase the target drive — <strong>don't skip this step!</strong></div></div>
-    <div class="guide-card reveal"><div class="guide-step">04</div><div class="guide-icon">🔧</div><div class="guide-title">Enter Boot Menu</div><div class="guide-text">Restart your PC and press <strong>F2, F12, DEL, or ESC</strong> (depends on brand) to open the boot menu. Select your USB drive to boot from it.</div></div>
-    <div class="guide-card reveal"><div class="guide-step">05</div><div class="guide-icon">⚡</div><div class="guide-title">Run the Installer</div><div class="guide-text">Follow the on-screen wizard. Pick language, keyboard, and where to install. Choose <strong>"Erase disk and install"</strong> for a clean fresh start.</div></div>
-    <div class="guide-card reveal"><div class="guide-step">06</div><div class="guide-icon">🎉</div><div class="guide-title">Boot Your New OS</div><div class="guide-text">Installation takes 10–30 minutes. Remove the USB when prompted, restart — and welcome to your brand new operating system!</div></div>
-  </div>
-
-  <div class="reveal" style="margin-top:3rem">
-    <h3 style="font-family:var(--font-head);font-size:1.25rem;font-weight:700;margin-bottom:1.25rem">🛠 Tools You'll Need</h3>
-    <div class="distro-grid" style="margin-top:0">
-      <a class="distro-card" href="https://rufus.ie" target="_blank" rel="noopener"><div class="distro-logo">🔥</div><div class="distro-info"><div class="distro-name">Rufus</div><div class="distro-use">Best USB flasher for Windows</div></div></a>
-      <a class="distro-card" href="https://etcher.balena.io" target="_blank" rel="noopener"><div class="distro-logo">⚡</div><div class="distro-info"><div class="distro-name">balenaEtcher</div><div class="distro-use">Cross-platform USB flasher</div></div></a>
-      <a class="distro-card" href="https://www.ventoy.net" target="_blank" rel="noopener"><div class="distro-logo">💿</div><div class="distro-info"><div class="distro-name">Ventoy</div><div class="distro-use">Boot multiple ISOs from one USB</div></div></a>
-    </div>
-  </div>
-</section>
 </div>
 
-<!-- COMPARE TABLE -->
-<section class="section" id="compare">
-  <div class="reveal">
-    <span class="section-tag">Side by Side</span>
-    <h2 class="section-title">OS Comparison</h2>
-    <p class="section-sub">Not sure which OS to pick? Here's a quick breakdown to help you decide.</p>
-  </div>
-  <div class="compare-wrap reveal">
-    <table>
-      <thead>
-        <tr>
-          <th>Feature</th>
-          <th>🪟 Windows 11</th>
-          <th>🐧 Ubuntu</th>
-          <th>🍎 macOS</th>
-          <th>🌿 Linux Mint</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>Cost</td><td>Paid / OEM</td><td><span class="check">✔ Free</span></td><td>Free (Mac only)</td><td><span class="check">✔ Free</span></td></tr>
-        <tr><td>Beginner Friendly</td><td><span class="check">✔✔ Very</span></td><td><span class="check">✔ Good</span></td><td><span class="check">✔✔ Very</span></td><td><span class="check">✔✔ Very</span></td></tr>
-        <tr><td>Gaming Support</td><td><span class="check">Excellent</span></td><td><span class="half">Good (Steam/Proton)</span></td><td><span class="cross">Limited</span></td><td><span class="half">Good (Proton)</span></td></tr>
-        <tr><td>Privacy</td><td><span class="cross">Low</span></td><td><span class="check">High</span></td><td><span class="half">Medium</span></td><td><span class="check">High</span></td></tr>
-        <tr><td>Virus Risk</td><td><span class="cross">High</span></td><td><span class="check">Very Low</span></td><td><span class="half">Low</span></td><td><span class="check">Very Low</span></td></tr>
-        <tr><td>Old Hardware</td><td><span class="cross">Poor</span></td><td><span class="check">Great</span></td><td><span class="cross">Apple Only</span></td><td><span class="check">Excellent</span></td></tr>
-        <tr><td>Software Library</td><td><span class="check">Vast</span></td><td><span class="half">Good</span></td><td><span class="check">Very Good</span></td><td><span class="half">Good</span></td></tr>
-        <tr><td>Customisable</td><td><span class="half">Limited</span></td><td><span class="check">Very High</span></td><td><span class="cross">Low</span></td><td><span class="check">Very High</span></td></tr>
-      </tbody>
-    </table>
-  </div>
+
+<div class="os-filters">
+
+<button onclick="filterOS('all')">All</button>
+<button onclick="filterOS('windows')">Windows</button>
+<button onclick="filterOS('ubuntu')">Ubuntu</button>
+<button onclick="filterOS('linux')">Linux</button>
+<button onclick="filterOS('macos')">macOS</button>
+
+</div>
+
+
+<div class="os-grid">
+
+<div class="os-card windows reveal">
+
+<div class="card-bar win-bar"></div>
+
+<div class="os-icon win">🪟</div>
+
+<div class="os-name">Windows 11</div>
+
+<div class="os-version">Latest stable — Microsoft</div>
+
+<div class="os-desc">
+Modern UI, improved performance and built-in security.
+</div>
+
+<a class="download-btn btn-win" href="windows11.html">
+🔗 View Download Options
+</a>
+
+</div>
+
+
+<div class="os-card windows reveal">
+
+<div class="card-bar win-bar"></div>
+
+<div class="os-icon win">🪟</div>
+
+<div class="os-name">Windows 10</div>
+
+<div class="os-version">Still widely used</div>
+
+<div class="os-desc">
+Great compatibility with older hardware and software.
+</div>
+
+<a class="download-btn btn-win" href="windows10.html">
+🔗 View Download Options
+</a>
+
+</div>
+
+
+<div class="os-card ubuntu reveal">
+
+<div class="card-bar ubu-bar"></div>
+
+<div class="os-icon ubu">🐧</div>
+
+<div class="os-name">Ubuntu 24.04</div>
+
+<div class="os-version">Canonical LTS release</div>
+
+<div class="os-desc">
+One of the most beginner-friendly Linux distributions.
+</div>
+
+<a class="download-btn btn-ubu" href="ubuntu.html">
+🔗 View Download Options
+</a>
+
+</div>
+
+
+<div class="os-card macos reveal">
+
+<div class="card-bar mac-bar"></div>
+
+<div class="os-icon mac">🍎</div>
+
+<div class="os-name">macOS Sequoia</div>
+
+<div class="os-version">Apple macOS 15</div>
+
+<div class="os-desc">
+Apple's polished and secure operating system.
+</div>
+
+<a class="download-btn btn-mac" href="macos.html">
+🔗 View Download Options
+</a>
+
+</div>
+
+
+<div class="os-card linux reveal">
+
+<div class="card-bar lin-bar"></div>
+
+<div class="os-icon lin">🌿</div>
+
+<div class="os-name">Linux Mint 22</div>
+
+<div class="os-version">Wilma</div>
+
+<div class="os-desc">
+Perfect Linux distribution for users switching from Windows.
+</div>
+
+<a class="download-btn btn-lin" href="mint.html">
+🔗 View Download Options
+</a>
+
+</div>
+
+</div>
+
 </section>
 
-<!-- FAQ -->
-<section class="section" id="faq" style="padding-top:0">
-  <div class="reveal">
-    <span class="section-tag">Common Questions</span>
-    <h2 class="section-title">Frequently Asked Questions</h2>
-  </div>
-  <div class="faq-list">
-    <div class="faq-item reveal">
-      <button class="faq-q" onclick="toggleFaq(this)">What is an ISO file? <span class="arrow">▼</span></button>
-      <div class="faq-a">An ISO file is a complete disk image of an operating system — think of it as a digital copy of an installation DVD. You download it once, then write it to a USB drive using a tool like Rufus or balenaEtcher to install the OS on any computer.</div>
-    </div>
-    <div class="faq-item reveal">
-      <button class="faq-q" onclick="toggleFaq(this)">Will installing a new OS delete my files? <span class="arrow">▼</span></button>
-      <div class="faq-a">If you do a clean install (most common method), yes — it will erase everything on the selected drive. Always back up your important files to an external hard drive or cloud storage like Google Drive or OneDrive before you begin.</div>
-    </div>
-    <div class="faq-item reveal">
-      <button class="faq-q" onclick="toggleFaq(this)">Can I go back to Windows after installing Linux? <span class="arrow">▼</span></button>
-      <div class="faq-a">Yes! You can always reinstall Windows using the official Microsoft Media Creation Tool. Just download the Windows ISO from Microsoft's site, create a bootable USB, and install it the same way as any other OS.</div>
-    </div>
-    <div class="faq-item reveal">
-      <button class="faq-q" onclick="toggleFaq(this)">Is Linux good for gaming? <span class="arrow">▼</span></button>
-      <div class="faq-a">Yes! Steam on Linux with Proton compatibility lets you play thousands of Windows games. Pop!_OS and Ubuntu both work great with Steam. For maximum game compatibility though, Windows 11 is still the top choice for serious gamers.</div>
-    </div>
-    <div class="faq-item reveal">
-      <button class="faq-q" onclick="toggleFaq(this)">What USB size do I need? <span class="arrow">▼</span></button>
-      <div class="faq-a">For Linux distros, 8 GB is usually enough. For Windows 10 or 11, you need at least 8 GB — but a 16 GB USB is recommended to be safe. Use a USB 3.0 drive for much faster flashing and booting speeds.</div>
-    </div>
-    <div class="faq-item reveal">
-      <button class="faq-q" onclick="toggleFaq(this)">Which Linux distro is best for beginners? <span class="arrow">▼</span></button>
-      <div class="faq-a">Linux Mint and Ubuntu are the best for beginners. Linux Mint looks very similar to Windows so the switch is easy. Ubuntu has the largest community and the most tutorials, guides, and online help available.</div>
-    </div>
-  </div>
-</section>
 
 <footer>
-  <div class="footer-logo">ISO Hub</div>
-  <p class="footer-text">Your one-stop resource for official OS downloads and installation guides.</p>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="windows11.html">Windows 11</a>
-    <a href="windows10.html">Windows 10</a>
-    <a href="ubuntu.html">Ubuntu</a>
-    <a href="mint.html">Linux Mint</a>
-    <a href="macos.html">macOS</a>
-    <a href="#guide">Install Guide</a>
-    <a href="#faq">FAQ</a>
-  </div>
-  <div class="footer-bottom">© 2025 ISO Hub — All downloads redirect to official sources. Not affiliated with Microsoft, Canonical, or Apple.</div>
+
+<div class="footer-logo">ISO Hub</div>
+
+<p class="footer-text">
+Official OS downloads and installation guides.
+</p>
+
+<div class="footer-bottom">
+© 2025 ISO Hub
+</div>
+
 </footer>
 
+
 <script>
-  function toggleFaq(btn) {
-    const ans = btn.nextElementSibling;
-    const isOpen = ans.classList.contains('open');
-    document.querySelectorAll('.faq-a.open').forEach(a => a.classList.remove('open'));
-    document.querySelectorAll('.faq-q.open').forEach(q => q.classList.remove('open'));
-    if (!isOpen) { ans.classList.add('open'); btn.classList.add('open'); }
-  }
-  const io = new IntersectionObserver(entries =>
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }), { threshold: 0.1 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+
+function toggleFaq(btn){
+
+const ans = btn.nextElementSibling
+const isOpen = ans.classList.contains('open')
+
+document.querySelectorAll('.faq-a.open')
+.forEach(a=>a.classList.remove('open'))
+
+document.querySelectorAll('.faq-q.open')
+.forEach(q=>q.classList.remove('open'))
+
+if(!isOpen){
+ans.classList.add('open')
+btn.classList.add('open')
+}
+
+}
+
+
+
+const io = new IntersectionObserver(entries =>
+
+entries.forEach(e=>{
+
+if(e.isIntersecting){
+e.target.classList.add('visible')
+}
+
+})
+
+,{threshold:0.1})
+
+document.querySelectorAll('.reveal')
+.forEach(el=>io.observe(el))
+
+
+
+const search = document.getElementById("osSearch")
+
+search.addEventListener("input", e=>{
+
+const term = e.target.value.toLowerCase()
+
+const cards = document.querySelectorAll(".os-card")
+
+cards.forEach(card=>{
+
+const name =
+card.querySelector(".os-name")
+.innerText
+.toLowerCase()
+
+card.style.display =
+name.includes(term)
+? "block"
+: "none"
+
+})
+
+})
+
+
+
+function filterOS(type){
+
+const cards = document.querySelectorAll(".os-card")
+
+cards.forEach(card=>{
+
+if(type==="all"){
+card.style.display="block"
+}
+else if(card.classList.contains(type)){
+card.style.display="block"
+}
+else{
+card.style.display="none"
+}
+
+})
+
+}
+
 </script>
+
 </body>
 </html>
