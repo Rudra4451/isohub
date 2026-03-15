@@ -11,7 +11,7 @@ A modern hub for finding <strong>official operating system ISO downloads</strong
 
 Visit the website:
 
-https://your-site-link.com
+https://rudra4451.github.io/isohub/
 
 ---
 
@@ -108,7 +108,7 @@ Linux| Green
 
 Clone the repository:
 
-git clone https://github.com/yourusername/isohub.git
+git clone https://github.com/rudra4451/isohub.git
 
 Open the folder and launch:
 
