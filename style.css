@@ -180,27 +180,6 @@ nav {
 .btn-mac { background: linear-gradient(135deg,#8b7cf8,var(--mac2));  color:#16122e; }
 .btn-lin { background: linear-gradient(135deg,var(--lin),var(--lin2)); color:#061a0e; }
 
-.search-box{
-margin-top:2rem;
-display:flex;
-justify-content:center;
-}
-
-.search-box input{
-width:320px;
-padding:.75rem 1rem;
-border-radius:999px;
-border:1px solid var(--border);
-background:var(--bg2);
-color:var(--text);
-font-size:.9rem;
-outline:none;
-}
-
-.search-box input:focus{
-border-color:var(--accent);
-}
-
 /* ── DISTRO GRID ── */
 .distro-grid {
   display: grid;
