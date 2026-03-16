@@ -2,19 +2,21 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>ISO Hub — Find &amp; Install Any OS</title>
-<meta name="description" content="Download OS ISO files from official sources. Learn how to install Windows, Ubuntu, macOS, Linux Mint and more."/>
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300d4ff' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%2300d4ff'/%3E%3C/svg%3E"/>
+<meta name="description" content="Download OS ISO files from official sources. Free step-by-step guides to install Windows, Linux, macOS on any laptop or desktop."/>
+<meta property="og:title" content="ISO Hub — Find & Install Any OS"/>
+<meta property="og:description" content="Official ISO downloads + installation guides for Windows, Linux, macOS and more."/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none'%3E%3Ccircle cx='12' cy='12' r='10' stroke='%2300d4ff' stroke-width='2'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%2300d4ff'/%3E%3C/svg%3E"/>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-<div class="particles" id="particles"></div>
-<div class="cursor-glow" id="cursorGlow"></div>
+<div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
 
+<!-- NAV -->
 <nav>
   <a class="nav-logo" href="index.html">
-    <svg viewBox="0 0 24 24" fill="none" stroke-width="2" style="width:28px;height:28px"><defs><linearGradient id="ng" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" stop-color="#00d4ff"/><stop offset="100%" stop-color="#ff2d78"/></linearGradient></defs><circle cx="12" cy="12" r="10" stroke="url(#ng)"/><circle cx="12" cy="12" r="3" stroke="url(#ng)"/></svg>
+    <svg viewBox="0 0 24 24" fill="none"><defs><linearGradient id="nl" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs><circle cx="12" cy="12" r="10" stroke="url(#nl)" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="url(#nl)"/></svg>
     ISO Hub
   </a>
   <ul class="nav-links">
@@ -27,263 +29,303 @@
   </ul>
   <div class="nav-right">
     <a class="nav-cta" href="#os">Get Started →</a>
-    <button class="hamburger" id="hamburgerBtn" aria-label="Menu"><span></span><span></span><span></span></button>
+    <button class="hamburger" id="hbtn" aria-label="Menu"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#os"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg> Download OS</a>
-  <a href="#distros"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg> More Distros</a>
-  <a href="#guide"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg> How-To Guide</a>
-  <a href="#quiz"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg> OS Quiz</a>
-  <a href="#compare"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg> Compare OS</a>
-  <a href="#faq"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3m0 4h.01"/></svg> FAQ</a>
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mmenu">
+  <a href="#os"><svg class="mi" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>Download OS</a>
+  <a href="#distros"><svg class="mi" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>More Distros</a>
+  <a href="#guide"><svg class="mi" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>How-To Guide</a>
+  <a href="#quiz"><svg class="mi" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3m0 4h.01"/></svg>OS Quiz</a>
+  <a href="#compare"><svg class="mi" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>Compare OS</a>
+  <a href="#faq"><svg class="mi" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3m0 4h.01"/></svg>FAQ</a>
 </div>
 
+<!-- HERO -->
 <header class="hero">
-  <div class="hero-glow-1"></div>
-  <div class="hero-glow-2"></div>
-  <div class="hero-badge"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg> 100% Official Sources — No Shady Mirrors</div>
-  <h1>Find &amp; Install<br/><span class="grad-full">Any OS</span><br/>Without the Headache</h1>
-  <p class="hero-sub">Download ISO files from official sources and learn how to install any operating system step by step — all in one place.</p>
-  <div class="hero-btns">
-    <a class="btn-primary" href="#os"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg> Browse Downloads</a>
-    <a class="btn-secondary" href="#guide"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg> Installation Guide</a>
+  <div class="hero-badge">
+    <svg width="12" height="12" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+    100% Official Sources — No Mirrors
   </div>
+  <h1>Find &amp; Install<br/><span class="grad">Any OS Easily</span></h1>
+  <p class="hero-sub">Download ISO files directly from official sources and learn how to install any operating system step by step — all in one place.</p>
+  <div class="hero-btns">
+    <a class="btn-p" href="#os">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>
+      Browse Downloads
+    </a>
+    <a class="btn-s" href="#quiz">
+      <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3m0 4h.01"/></svg>
+      Which OS Suits Me?
+    </a>
+  </div>
+  <!-- FIXED SEARCH BAR -->
   <div class="search-wrap">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-    <input type="text" id="searchInput" placeholder="Search OS... e.g. gaming, old pc, free, privacy"/>
+    <div class="search-inner">
+      <svg class="search-icon" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <input type="text" id="searchInput" placeholder="Search: Windows, gaming, old PC, free, privacy..." autocomplete="off"/>
+    </div>
   </div>
 </header>
 
-<section class="section" id="os">
+<!-- STATS -->
+<div class="stats">
+  <div class="stat reveal"><span class="stat-num">15+</span><div class="stat-label">Operating Systems</div></div>
+  <div class="stat reveal"><span class="stat-num">100%</span><div class="stat-label">Official Sources</div></div>
+  <div class="stat reveal"><span class="stat-num">6</span><div class="stat-label">Step Install Guide</div></div>
+  <div class="stat reveal"><span class="stat-num">Free</span><div class="stat-label">Always &amp; Forever</div></div>
+</div>
+
+<!-- OS CARDS -->
+<section class="sec" id="os">
   <div class="reveal">
-    <span class="section-tag"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg> Official Sources Only</span>
-    <h2 class="section-title">Choose Your <span class="grad-cyan">Operating System</span></h2>
-    <p class="section-sub">Every button redirects you to the official download page — no shady mirrors, no bundled junk.</p>
+    <span class="s-tag"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg>Official Sources Only</span>
+    <h2 class="s-title">Choose Your <span class="grad">Operating System</span></h2>
+    <p class="s-sub">Every button takes you directly to the official download page — no shady mirrors, no bundled software, ever.</p>
   </div>
-  <div class="os-grid stagger" id="osGrid">
+  <div class="os-grid stagger">
 
-    <div class="os-card windows reveal">
-      <div class="card-bar win-bar"></div>
-      <div class="card-header">
-        <div class="os-icon-wrap win-icon">
-          <svg viewBox="0 0 24 24" fill="#00a8ff" style="width:30px;height:30px"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
-        </div>
-        <div><div class="os-name">Windows 11</div><div class="os-version">v23H2 · Microsoft</div></div>
-      </div>
-      <div class="os-desc">Modern UI, improved performance and built-in security. Best for new hardware with TPM 2.0 support.</div>
-      <div class="os-tags"><span class="tag cyan">64-bit</span><span class="tag">Desktop</span><span class="tag amber">TPM 2.0 Required</span></div>
-      <a class="download-btn btn-win" href="windows11.html"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg> View Download Options</a>
+    <div class="os-card w reveal" data-s="windows 11 gaming tpm new hardware microsoft 64bit">
+      <div class="os-icon wi"><svg width="26" height="26" viewBox="0 0 24 24" fill="#0ea5e9"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg></div>
+      <div class="os-name">Windows 11</div>
+      <div class="os-ver">v23H2 · Latest Stable · Microsoft</div>
+      <div class="os-desc">Modern design, improved performance and built-in security. Best for new hardware with TPM 2.0.</div>
+      <div class="os-tags"><span class="tag c">64-bit</span><span class="tag">Desktop</span><span class="tag o">TPM 2.0 Required</span></div>
+      <a class="dl-btn bw" href="windows11.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>View Download Options</a>
     </div>
 
-    <div class="os-card windows reveal">
-      <div class="card-bar win-bar"></div>
-      <div class="card-header">
-        <div class="os-icon-wrap win-icon">
-          <svg viewBox="0 0 24 24" fill="#00a8ff" style="width:30px;height:30px"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>
-        </div>
-        <div><div class="os-name">Windows 10</div><div class="os-version">22H2 · Microsoft</div></div>
-      </div>
-      <div class="os-desc">Still the world's most used OS. Runs on older hardware without TPM 2.0. Great compatibility.</div>
-      <div class="os-tags"><span class="tag cyan">32 / 64-bit</span><span class="tag green">No TPM Needed</span><span class="tag">Laptop &amp; Desktop</span></div>
-      <a class="download-btn btn-win" href="windows10.html"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg> View Download Options</a>
+    <div class="os-card w reveal" data-s="windows 10 old hardware compatible microsoft no tpm 32bit">
+      <div class="os-icon wi"><svg width="26" height="26" viewBox="0 0 24 24" fill="#0ea5e9"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg></div>
+      <div class="os-name">Windows 10</div>
+      <div class="os-ver">v22H2 · Widely Supported · Microsoft</div>
+      <div class="os-desc">The world's most used OS. Runs on older hardware without TPM. Great software compatibility.</div>
+      <div class="os-tags"><span class="tag c">32 / 64-bit</span><span class="tag g">No TPM Needed</span><span class="tag">Laptop &amp; Desktop</span></div>
+      <a class="dl-btn bw" href="windows10.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>View Download Options</a>
     </div>
 
-    <div class="os-card ubuntu reveal">
-      <div class="card-bar ubu-bar"></div>
-      <div class="card-header">
-        <div class="os-icon-wrap ubu-icon">
-          <svg viewBox="0 0 24 24" style="width:30px;height:30px"><circle cx="12" cy="12" r="10" fill="#ff5722"/><circle cx="12" cy="12" r="3" fill="white"/><circle cx="12" cy="4" r="2" fill="white"/><circle cx="19.2" cy="16" r="2" fill="white"/><circle cx="4.8" cy="16" r="2" fill="white"/></svg>
-        </div>
-        <div><div class="os-name">Ubuntu 24.04 LTS</div><div class="os-version">Noble Numbat · Canonical</div></div>
-      </div>
-      <div class="os-desc">The most beginner-friendly Linux distro. Huge community, excellent hardware support, tons of free software.</div>
-      <div class="os-tags"><span class="tag green">Free</span><span class="tag purple">LTS 2029</span><span class="tag amber">Beginner Friendly</span></div>
-      <a class="download-btn btn-ubu" href="ubuntu.html"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg> View Download Options</a>
+    <div class="os-card u reveal" data-s="ubuntu linux beginner free lts canonical open source privacy">
+      <div class="os-icon ub"><svg width="26" height="26" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#f97316"/><circle cx="12" cy="12" r="3" fill="white"/><circle cx="12" cy="4" r="2" fill="white"/><circle cx="19.2" cy="16" r="2" fill="white"/><circle cx="4.8" cy="16" r="2" fill="white"/></svg></div>
+      <div class="os-name">Ubuntu 24.04 LTS</div>
+      <div class="os-ver">Noble Numbat · LTS · Canonical</div>
+      <div class="os-desc">The most beginner-friendly Linux. Huge community, excellent hardware support, tons of free software.</div>
+      <div class="os-tags"><span class="tag g">Free</span><span class="tag p">LTS Until 2029</span><span class="tag o">Beginner Friendly</span></div>
+      <a class="dl-btn bu" href="ubuntu.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>View Download Options</a>
     </div>
 
-    <div class="os-card macos reveal">
-      <div class="card-bar mac-bar"></div>
-      <div class="card-header">
-        <div class="os-icon-wrap mac-icon">
-          <svg viewBox="0 0 24 24" fill="#b14aff" style="width:30px;height:30px"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
-        </div>
-        <div><div class="os-name">macOS Sequoia</div><div class="os-version">macOS 15 · Apple</div></div>
-      </div>
-      <div class="os-desc">Apple's polished, secure OS. Only works on Apple Mac hardware. Download via Mac App Store.</div>
-      <div class="os-tags"><span class="tag purple">Apple Silicon</span><span class="tag cyan">Intel Mac</span><span class="tag">Mac Only</span></div>
-      <a class="download-btn btn-mac" href="macos.html"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg> View Download Options</a>
+    <div class="os-card m reveal" data-s="macos apple sequoia mac silicon privacy secure premium">
+      <div class="os-icon ma"><svg width="26" height="26" viewBox="0 0 24 24" fill="#a855f7"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></div>
+      <div class="os-name">macOS Sequoia</div>
+      <div class="os-ver">macOS 15 · Latest · Apple</div>
+      <div class="os-desc">Apple's polished and secure OS. Seamlessly integrated ecosystem. Only for Apple Mac hardware.</div>
+      <div class="os-tags"><span class="tag p">Apple Silicon</span><span class="tag c">Intel Mac</span><span class="tag">Mac Only</span></div>
+      <a class="dl-btn bm" href="macos.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>View Download Options</a>
     </div>
 
-    <div class="os-card linux reveal">
-      <div class="card-bar lin-bar"></div>
-      <div class="card-header">
-        <div class="os-icon-wrap lin-icon">
-          <svg viewBox="0 0 24 24" fill="#00e676" style="width:30px;height:30px"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 14.5v-9l7 4.5-7 4.5z"/></svg>
-        </div>
-        <div><div class="os-name">Linux Mint 22</div><div class="os-version">Wilma · Linux Mint Team</div></div>
-      </div>
-      <div class="os-desc">Feels exactly like Windows. Perfect for switching from Windows. Fast, lightweight and beginner-friendly.</div>
-      <div class="os-tags"><span class="tag green">Free</span><span class="tag amber">Windows-like UI</span><span class="tag cyan">Old PC Friendly</span></div>
-      <a class="download-btn btn-lin" href="mint.html"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg> View Download Options</a>
+    <div class="os-card l reveal" data-s="linux mint old pc windows-like free lightweight beginner cinnamon">
+      <div class="os-icon li"><svg width="26" height="26" viewBox="0 0 24 24" fill="#10b981"><path d="M20.1 9.2l-.7-.4c.1-.3.2-.6.2-1 0-1.7-1.4-3-3-3-1 0-1.9.5-2.4 1.3-.5-.2-1.1-.3-1.7-.3-2.5 0-4.5 2-4.5 4.5 0 .4.1.7.2 1.1C7.2 11.9 6.5 13 6.5 14.3c0 2.1 1.7 3.7 3.7 3.7.7 0 1.4-.2 1.9-.6.5.4 1.2.6 1.9.6 2.1 0 3.7-1.7 3.7-3.7 0-.6-.2-1.1-.4-1.6l1.1-.6c.9-.5 1.2-1.6.7-2.5z"/></svg></div>
+      <div class="os-name">Linux Mint 22</div>
+      <div class="os-ver">Wilma · Cinnamon · Linux Mint Team</div>
+      <div class="os-desc">Feels exactly like Windows. Perfect for those switching from Windows. Fast on older hardware.</div>
+      <div class="os-tags"><span class="tag g">Free</span><span class="tag o">Windows-like UI</span><span class="tag c">Lightweight</span></div>
+      <a class="dl-btn bl" href="mint.html"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>View Download Options</a>
     </div>
 
-    <div class="os-card linux reveal">
-      <div class="card-bar lin-bar"></div>
-      <div class="card-header">
-        <div class="os-icon-wrap lin-icon">
-          <svg viewBox="0 0 24 24" fill="#00e676" style="width:30px;height:30px"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-        </div>
-        <div><div class="os-name">Fedora 41</div><div class="os-version">Workstation · Red Hat</div></div>
-      </div>
-      <div class="os-desc">Cutting-edge Linux with the latest software. Ideal for developers and power users who want fresh packages.</div>
-      <div class="os-tags"><span class="tag green">Free</span><span class="tag purple">Dev Focused</span><span class="tag cyan">GNOME Desktop</span></div>
-      <a class="download-btn btn-lin" href="https://fedoraproject.org/workstation/download" target="_blank" rel="noopener">↗ Official Fedora Site</a>
+    <div class="os-card l reveal" data-s="fedora linux developer advanced gnome red hat fresh packages">
+      <div class="os-icon li"><svg width="26" height="26" viewBox="0 0 24 24" fill="#10b981"><path d="M12 0C5.372 0 0 5.372 0 12s5.372 12 12 12 12-5.372 12-12S18.628 0 12 0zm5.5 13.5H13v4.5a1.5 1.5 0 01-3 0V13H5.5a1.5 1.5 0 010-3H10V5.5a1.5 1.5 0 013 0V10h4.5a1.5 1.5 0 010 3z"/></svg></div>
+      <div class="os-name">Fedora 41</div>
+      <div class="os-ver">Workstation · Red Hat</div>
+      <div class="os-desc">Cutting-edge Linux with the latest software. Ideal for developers who want fresh packages.</div>
+      <div class="os-tags"><span class="tag g">Free</span><span class="tag p">Dev Focused</span><span class="tag c">GNOME Desktop</span></div>
+      <a class="dl-btn bl" href="https://fedoraproject.org/workstation/download" target="_blank" rel="noopener"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>Official Fedora Site</a>
     </div>
 
-    <div id="noResults" style="display:none;text-align:center;color:var(--muted);padding:3rem;grid-column:1/-1">No OS found. Try "free", "gaming", or "old pc".</div>
   </div>
 </section>
 
-<section class="section" id="distros" style="padding-top:0">
+<!-- MORE DISTROS -->
+<section class="sec" id="distros" style="padding-top:0">
   <div class="reveal">
-    <span class="section-tag"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg> Linux Ecosystem</span>
-    <h2 class="section-title">More <span class="grad-cyan">Linux Distros</span></h2>
-    <p class="section-sub">Whether you need speed, security, or simplicity — there's a Linux for every use case.</p>
+    <span class="s-tag"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg>Linux Ecosystem</span>
+    <h2 class="s-title">More Linux Distros</h2>
+    <p class="s-sub">Whether you need speed, security, or simplicity — there's a Linux for every need.</p>
   </div>
   <div class="distro-grid stagger">
-    <a class="distro-card reveal" href="https://archlinux.org/download/" target="_blank" rel="noopener"><div class="distro-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#00d4ff"><path d="M12 2L2 19.5h20L12 2zm0 3.5l7 13H5L12 5.5z"/></svg></div><div><div class="distro-name">Arch Linux</div><div class="distro-use">Advanced users, full control</div></div></a>
-    <a class="distro-card reveal" href="https://www.debian.org/distrib/" target="_blank" rel="noopener"><div class="distro-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#a855f7"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg></div><div><div class="distro-name">Debian</div><div class="distro-use">Rock solid, servers &amp; desktops</div></div></a>
-    <a class="distro-card reveal" href="https://manjaro.org/download/" target="_blank" rel="noopener"><div class="distro-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#10b981"><rect x="2" y="2" width="9" height="9" rx="1"/><rect x="13" y="2" width="9" height="9" rx="1"/><rect x="2" y="13" width="9" height="9" rx="1"/><rect x="13" y="13" width="9" height="9" rx="1"/></svg></div><div><div class="distro-name">Manjaro</div><div class="distro-use">Arch-based, beginner friendly</div></div></a>
-    <a class="distro-card reveal" href="https://elementary.io/" target="_blank" rel="noopener"><div class="distro-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#f97316"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5" stroke="#fff" stroke-width="2" fill="none"/></svg></div><div><div class="distro-name">elementary OS</div><div class="distro-use">Beautiful macOS-style Linux</div></div></a>
-    <a class="distro-card reveal" href="https://zorin.com/os/download/" target="_blank" rel="noopener"><div class="distro-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#0ea5e9"><path d="M4 6h16l-16 12h16"/></svg></div><div><div class="distro-name">Zorin OS</div><div class="distro-use">Perfect for Windows switchers</div></div></a>
-    <a class="distro-card reveal" href="https://pop.system76.com/" target="_blank" rel="noopener"><div class="distro-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#fbbf24"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div class="distro-name">Pop!_OS</div><div class="distro-use">Gaming, NVIDIA, developers</div></div></a>
-    <a class="distro-card reveal" href="https://kali.org/get-kali/" target="_blank" rel="noopener"><div class="distro-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#ff2d78"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 3l3 6H9l3-6zm-5 8h10l-5 6-5-6z"/></svg></div><div><div class="distro-name">Kali Linux</div><div class="distro-use">Security &amp; penetration testing</div></div></a>
-    <a class="distro-card reveal" href="https://tails.boum.org/install/" target="_blank" rel="noopener"><div class="distro-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="#a855f7"><path d="M12 2L4 7v5c0 4.4 3.4 8.5 8 9.5 4.6-1 8-5.1 8-9.5V7l-8-5z"/></svg></div><div><div class="distro-name">Tails OS</div><div class="distro-use">Privacy &amp; anonymity</div></div></a>
+    <a class="distro-card reveal" href="https://archlinux.org/download/" target="_blank" rel="noopener"><div class="d-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#00d4ff"><path d="M12 2L2 19.5h20L12 2zm0 3.5l7 13H5L12 5.5z"/></svg></div><div><div class="d-name">Arch Linux</div><div class="d-use">Advanced users, full control</div></div></a>
+    <a class="distro-card reveal" href="https://www.debian.org/distrib/" target="_blank" rel="noopener"><div class="d-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#a855f7"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="4" fill="#05050f"/></svg></div><div><div class="d-name">Debian</div><div class="d-use">Rock solid, servers &amp; desktops</div></div></a>
+    <a class="distro-card reveal" href="https://manjaro.org/download/" target="_blank" rel="noopener"><div class="d-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#10b981"><rect x="2" y="2" width="9" height="9" rx="1.5"/><rect x="13" y="2" width="9" height="9" rx="1.5"/><rect x="2" y="13" width="9" height="9" rx="1.5"/><rect x="13" y="13" width="9" height="9" rx="1.5"/></svg></div><div><div class="d-name">Manjaro</div><div class="d-use">Arch-based, beginner friendly</div></div></a>
+    <a class="distro-card reveal" href="https://elementary.io/" target="_blank" rel="noopener"><div class="d-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#f97316"><circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5" stroke="white" stroke-width="2" fill="none" stroke-linecap="round"/></svg></div><div><div class="d-name">elementary OS</div><div class="d-use">Beautiful macOS-style Linux</div></div></a>
+    <a class="distro-card reveal" href="https://zorin.com/os/download/" target="_blank" rel="noopener"><div class="d-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#0ea5e9"><path d="M4 6h16L4 18h16"/></svg></div><div><div class="d-name">Zorin OS</div><div class="d-use">Perfect for Windows switchers</div></div></a>
+    <a class="distro-card reveal" href="https://pop.system76.com/" target="_blank" rel="noopener"><div class="d-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#f59e0b"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div class="d-name">Pop!_OS</div><div class="d-use">Gaming, NVIDIA, developers</div></div></a>
+    <a class="distro-card reveal" href="https://kali.org/get-kali/" target="_blank" rel="noopener"><div class="d-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ff2d78"><path d="M12 2a10 10 0 100 20A10 10 0 0012 2zm0 3l3 6H9l3-6zm-5 8h10l-5 6-5-6z"/></svg></div><div><div class="d-name">Kali Linux</div><div class="d-use">Security &amp; penetration testing</div></div></a>
+    <a class="distro-card reveal" href="https://tails.boum.org/install/" target="_blank" rel="noopener"><div class="d-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="#a855f7"><path d="M12 2L4 7v5c0 4.4 3.4 8.5 8 9.5 4.6-1 8-5.1 8-9.5V7l-8-5z"/></svg></div><div><div class="d-name">Tails OS</div><div class="d-use">Privacy &amp; anonymity</div></div></a>
   </div>
 </section>
 
-<div class="alt-section" id="guide">
-<section class="section">
+<!-- HOW TO GUIDE -->
+<div class="alt" id="guide">
+<section class="sec">
   <div class="reveal">
-    <span class="section-tag"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg> Step-by-Step</span>
-    <h2 class="section-title">How to <span class="grad-pink">Change Your OS</span></h2>
-    <p class="section-sub">Follow these steps to safely install any operating system on your laptop or desktop.</p>
+    <span class="s-tag"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/></svg>Step-by-Step</span>
+    <h2 class="s-title">How to Change Your OS</h2>
+    <p class="s-sub">Follow these 6 steps to safely install any operating system on your laptop or desktop.</p>
   </div>
-  <div class="guide-cards stagger">
-    <div class="guide-card reveal"><div class="guide-step">01</div><div class="guide-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg></div><div class="guide-title">Download the ISO</div><div class="guide-text">Click any button above to go to the official site. Download the ISO file (1–5 GB) and save it somewhere easy to find.</div></div>
-    <div class="guide-card reveal"><div class="guide-step">02</div><div class="guide-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div><div class="guide-title">Create a Bootable USB</div><div class="guide-text">Use <strong>Rufus</strong> (Windows) or <strong>balenaEtcher</strong> (Mac/Linux) to flash the ISO to a USB drive (8 GB+).</div></div>
-    <div class="guide-card reveal"><div class="guide-step">03</div><div class="guide-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg></div><div class="guide-title">Backup Your Files First</div><div class="guide-text">Copy important files to an external drive or cloud. A clean install will erase the target drive — <strong>don't skip this!</strong></div></div>
-    <div class="guide-card reveal"><div class="guide-step">04</div><div class="guide-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg></div><div class="guide-title">Enter Boot Menu</div><div class="guide-text">Restart and press <strong>F2, F12, DEL, or ESC</strong> to open the boot menu. Select your USB drive to boot from it.</div></div>
-    <div class="guide-card reveal"><div class="guide-step">05</div><div class="guide-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div><div class="guide-title">Run the Installer</div><div class="guide-text">Follow the wizard. Pick language, keyboard, and where to install. Choose <strong>"Erase disk and install"</strong> for a clean start.</div></div>
-    <div class="guide-card reveal"><div class="guide-step">06</div><div class="guide-icon-wrap"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div><div class="guide-title">Boot Your New OS</div><div class="guide-text">Installation takes 10–30 minutes. Remove the USB when prompted, restart — welcome to your new OS!</div></div>
+
+  <div class="guide-grid stagger">
+    <div class="guide-card gc1 reveal">
+      <div class="g-num">Step 01</div>
+      <div class="g-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg></div>
+      <div class="g-title">Download the ISO</div>
+      <div class="g-text">Click any button above. You'll go to the official site. Download the ISO file (1–5 GB) and save it somewhere easy to find.</div>
+    </div>
+    <div class="guide-card gc2 reveal">
+      <div class="g-num">Step 02</div>
+      <div class="g-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M12 18h.01"/><path d="M9 6h6M9 10h6M9 14h4"/></svg></div>
+      <div class="g-title">Create Bootable USB</div>
+      <div class="g-text">Use <strong>Rufus</strong> (Windows) or <strong>balenaEtcher</strong> (Mac/Linux) to flash the ISO to a USB drive (8 GB+).</div>
+    </div>
+    <div class="guide-card gc3 reveal">
+      <div class="g-num">Step 03</div>
+      <div class="g-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg></div>
+      <div class="g-title">Backup Your Files</div>
+      <div class="g-text">Copy important files to external storage or cloud. A clean install erases the target drive — <strong>don't skip this!</strong></div>
+    </div>
+    <div class="guide-card gc4 reveal">
+      <div class="g-num">Step 04</div>
+      <div class="g-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <div class="g-title">Enter Boot Menu</div>
+      <div class="g-text">Restart and press <strong>F2, F12, DEL, or ESC</strong> to open BIOS. Select your USB drive to boot from it.</div>
+    </div>
+    <div class="guide-card gc5 reveal">
+      <div class="g-num">Step 05</div>
+      <div class="g-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div>
+      <div class="g-title">Run the Installer</div>
+      <div class="g-text">Follow the on-screen wizard. Choose <strong>"Erase disk and install"</strong> for a clean fresh start on your machine.</div>
+    </div>
+    <div class="guide-card gc6 reveal">
+      <div class="g-num">Step 06</div>
+      <div class="g-icon"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg></div>
+      <div class="g-title">Boot Your New OS</div>
+      <div class="g-text">Takes 10–30 minutes. Remove USB when prompted, restart — welcome to your brand new operating system!</div>
+    </div>
   </div>
+
+  <!-- TOOLS -->
   <div class="reveal" style="margin-top:3rem">
-    <h3 style="font-size:1.2rem;font-weight:700;margin-bottom:1.25rem"><svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg> Tools You'll Need</h3>
+    <h3 style="font-size:1.1rem;font-weight:700;margin-bottom:1.25rem;display:flex;align-items:center;gap:.6rem">
+      <svg width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="color:var(--cyan)"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+      Tools You'll Need
+    </h3>
     <div class="tools-grid">
-      <a class="tool-card" href="https://rufus.ie" target="_blank" rel="noopener"><div class="tool-icon" style="background:rgba(255,87,34,.15)"><svg width="22" height="22" viewBox="0 0 24 24" fill="#ff2d78"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div><div><div class="tool-name">Rufus</div><div class="tool-desc">Best USB flasher for Windows</div></div></a>
-      <a class="tool-card" href="https://etcher.balena.io" target="_blank" rel="noopener"><div class="tool-icon" style="background:rgba(0,212,255,.15)"><svg width="22" height="22" viewBox="0 0 24 24" fill="#00d4ff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg></div><div><div class="tool-name">balenaEtcher</div><div class="tool-desc">Cross-platform USB flasher</div></div></a>
-      <a class="tool-card" href="https://www.ventoy.net" target="_blank" rel="noopener"><div class="tool-icon" style="background:rgba(177,74,255,.15)"><svg width="22" height="22" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="2" stroke="#10b981" fill="none" stroke-width="2"/><path d="M8 9h8M8 12h6M8 15h4" stroke="#10b981" stroke-width="2"/></svg></div><div><div class="tool-name">Ventoy</div><div class="tool-desc">Boot multiple ISOs from one USB</div></div></a>
+      <a class="tool-card" href="https://rufus.ie" target="_blank" rel="noopener">
+        <div class="t-icon" style="background:rgba(255,45,120,.1);border:1px solid rgba(255,45,120,.2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="#ff2d78"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <div><div class="t-name">Rufus</div><div class="t-desc">Best USB flasher for Windows</div></div>
+      </a>
+      <a class="tool-card" href="https://etcher.balena.io" target="_blank" rel="noopener">
+        <div class="t-icon" style="background:rgba(0,212,255,.1);border:1px solid rgba(0,212,255,.2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="#00d4ff"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg></div>
+        <div><div class="t-name">balenaEtcher</div><div class="t-desc">Cross-platform USB flasher</div></div>
+      </a>
+      <a class="tool-card" href="https://www.ventoy.net" target="_blank" rel="noopener">
+        <div class="t-icon" style="background:rgba(16,185,129,.1);border:1px solid rgba(16,185,129,.2)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M8 9h8M8 12h5M8 15h3"/></svg></div>
+        <div><div class="t-name">Ventoy</div><div class="t-desc">Boot multiple ISOs from one USB</div></div>
+      </a>
     </div>
   </div>
 </section>
 </div>
 
-<section class="section" id="quiz">
+<!-- QUIZ -->
+<section class="sec" id="quiz">
   <div class="reveal">
-    <span class="section-tag"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg> Find Your Perfect OS</span>
-    <h2 class="section-title">Which OS <span class="grad-pink">Suits You?</span></h2>
-    <p class="section-sub">Answer 5 quick questions and we'll recommend the best operating system for your needs.</p>
+    <span class="s-tag"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3m0 4h.01"/></svg>Interactive</span>
+    <h2 class="s-title">Which OS <span class="grad">Suits You?</span></h2>
+    <p class="s-sub">Answer 5 quick questions and we'll recommend the perfect operating system for your exact needs.</p>
   </div>
-  <div class="quiz-wrap reveal">
-    <div class="quiz-progress-bar"><div class="quiz-progress-fill" id="quizProgress" style="width:0%"></div></div>
-    <div id="quizBody">
-      <div class="quiz-q-label" id="quizQLabel">Question 1 of 5</div>
-      <div class="quiz-question" id="quizQuestion"></div>
-      <div class="quiz-options" id="quizOptions"></div>
-    </div>
-    <div class="quiz-result" id="quizResult">
-      <div class="quiz-result-icon" id="quizResultIcon" style="width:80px;height:80px;border-radius:20px;margin:0 auto 1.25rem;display:flex;align-items:center;justify-content:center;font-size:2.5rem"></div>
-      <h3 id="quizResultName" style="font-size:1.6rem;font-weight:800;margin-bottom:.5rem"></h3>
-      <p id="quizResultDesc" style="color:var(--muted);font-size:.95rem;line-height:1.6;margin-bottom:1.5rem"></p>
-      <a id="quizResultLink" href="#" style="display:inline-flex;align-items:center;justify-content:center;padding:.8rem 2rem;border-radius:999px;color:#fff;font-weight:700;font-size:.95rem;text-decoration:none;margin-bottom:1.5rem"></a><br/>
-      <button class="quiz-restart" onclick="restartQuiz()"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M1 4v6h6M23 20v-6h-6"/><path d="M20.49 9A9 9 0 005.64 5.64L1 10m22 4l-4.64 4.36A9 9 0 013.51 15"/></svg> Take the quiz again</button>
-    </div>
-  </div>
+  <div class="quiz-wrap reveal" id="quiz"></div>
 </section>
 
-<div class="alt-section" id="compare">
-<section class="section">
+<!-- COMPARE -->
+<section class="sec" id="compare">
   <div class="reveal">
-    <span class="section-tag"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg> Side by Side</span>
-    <h2 class="section-title">OS <span class="grad-cyan">Comparison</span></h2>
-    <p class="section-sub">Not sure which OS to pick? Here's a quick breakdown to help you decide.</p>
+    <span class="s-tag"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>Side by Side</span>
+    <h2 class="s-title">OS Comparison</h2>
+    <p class="s-sub">Not sure which OS to pick? Here's a quick breakdown to help you decide.</p>
   </div>
   <div class="compare-wrap reveal">
     <table>
-      <thead><tr><th>Feature</th><th><svg width="14" height="14" viewBox="0 0 24 24" fill="#0ea5e9" style="vertical-align:middle;margin-right:5px"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg>Windows 11</th><th><svg width="14" height="14" viewBox="0 0 24 24" style="vertical-align:middle;margin-right:5px"><circle cx="12" cy="12" r="10" fill="#f97316"/><circle cx="12" cy="12" r="3" fill="white"/><circle cx="12" cy="4" r="2" fill="white"/><circle cx="19.2" cy="16" r="2" fill="white"/><circle cx="4.8" cy="16" r="2" fill="white"/></svg>Ubuntu</th><th><svg width="14" height="14" viewBox="0 0 24 24" fill="#a855f7" style="vertical-align:middle;margin-right:5px"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>macOS</th><th><svg width="14" height="14" viewBox="0 0 24 24" fill="#10b981" style="vertical-align:middle;margin-right:5px"><path d="M20.1 9.2l-.7-.4c.1-.3.2-.6.2-1 0-1.7-1.4-3-3-3-1 0-1.9.5-2.4 1.3-.5-.2-1.1-.3-1.7-.3-2.5 0-4.5 2-4.5 4.5 0 .4.1.7.2 1.1C7.2 11.9 6.5 13 6.5 14.3c0 2.1 1.7 3.7 3.7 3.7.7 0 1.4-.2 1.9-.6.5.4 1.2.6 1.9.6 2.1 0 3.7-1.7 3.7-3.7 0-.6-.2-1.1-.4-1.6l1.1-.6c.9-.5 1.2-1.6.7-2.5-.1-.2-.7-.5-1-.5z"/></svg>Linux Mint</th></tr></thead>
+      <thead>
+        <tr>
+          <th>Feature</th>
+          <th><span class="th-icon"><svg viewBox="0 0 24 24" fill="#0ea5e9"><path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.4H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.6H24V24l-12.9-1.801"/></svg> Windows 11</span></th>
+          <th><span class="th-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" fill="#f97316"/><circle cx="12" cy="12" r="3" fill="white"/><circle cx="12" cy="4.5" r="1.8" fill="white"/><circle cx="19" cy="15.5" r="1.8" fill="white"/><circle cx="5" cy="15.5" r="1.8" fill="white"/></svg> Ubuntu</span></th>
+          <th><span class="th-icon"><svg viewBox="0 0 24 24" fill="#a855f7"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg> macOS</span></th>
+          <th><span class="th-icon"><svg viewBox="0 0 24 24" fill="#10b981"><path d="M20.1 9.2l-.7-.4c.1-.3.2-.6.2-1 0-1.7-1.4-3-3-3-1 0-1.9.5-2.4 1.3-.5-.2-1.1-.3-1.7-.3-2.5 0-4.5 2-4.5 4.5 0 .4.1.7.2 1.1C7.2 11.9 6.5 13 6.5 14.3c0 2.1 1.7 3.7 3.7 3.7.7 0 1.4-.2 1.9-.6.5.4 1.2.6 1.9.6 2.1 0 3.7-1.7 3.7-3.7 0-.6-.2-1.1-.4-1.6l1.1-.6c.9-.5 1.2-1.6.7-2.5z"/></svg> Linux Mint</span></th>
+        </tr>
+      </thead>
       <tbody>
-        <tr><td>Cost</td><td>Paid / OEM</td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Free</span></td><td>Free (Mac only)</td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Free</span></td></tr>
-        <tr><td>Beginner Friendly</td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Very</span></td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Good</span></td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Very</span></td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Very</span></td></tr>
-        <tr><td>Gaming Support</td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Excellent</span></td><td><span class="half"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#fbbf24" stroke-width="3"><path d="M5 12h14"/></svg> Good (Proton)</span></td><td><span class="cross"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#ff2d78" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg> Limited</span></td><td><span class="half"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#fbbf24" stroke-width="3"><path d="M5 12h14"/></svg> Good (Proton)</span></td></tr>
-        <tr><td>Privacy</td><td><span class="cross"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#ff2d78" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg> Low</span></td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> High</span></td><td><span class="half"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#fbbf24" stroke-width="3"><path d="M5 12h14"/></svg> Medium</span></td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> High</span></td></tr>
-        <tr><td>Virus Risk</td><td><span class="cross"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#ff2d78" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg> High</span></td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Very Low</span></td><td><span class="half"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#fbbf24" stroke-width="3"><path d="M5 12h14"/></svg> Low</span></td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Very Low</span></td></tr>
-        <tr><td>Old Hardware</td><td><span class="cross"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#ff2d78" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg> Poor</span></td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Great</span></td><td><span class="cross"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#ff2d78" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg> Apple Only</span></td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Excellent</span></td></tr>
-        <tr><td>Software Library</td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Vast</span></td><td><span class="half"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#fbbf24" stroke-width="3"><path d="M5 12h14"/></svg> Good</span></td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Very Good</span></td><td><span class="half"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#fbbf24" stroke-width="3"><path d="M5 12h14"/></svg> Good</span></td></tr>
-        <tr><td>Customisable</td><td><span class="half"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#fbbf24" stroke-width="3"><path d="M5 12h14"/></svg> Limited</span></td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Very High</span></td><td><span class="cross"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#ff2d78" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg> Low</span></td><td><span class="check"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="#34d399" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg> Very High</span></td></tr>
+        <tr><td>Cost</td><td>Paid / OEM</td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Free</span></td><td>Free (Mac only)</td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Free</span></td></tr>
+        <tr><td>Beginner Friendly</td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Very Good</span></td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Good</span></td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Very Good</span></td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Best</span></td></tr>
+        <tr><td>Gaming</td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Excellent</span></td><td><span class="ch"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg>Good (Proton)</span></td><td><span class="cx"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg>Limited</span></td><td><span class="ch"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg>Good (Proton)</span></td></tr>
+        <tr><td>Privacy</td><td><span class="cx"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg>Low</span></td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>High</span></td><td><span class="ch"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg>Medium</span></td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>High</span></td></tr>
+        <tr><td>Virus Risk</td><td><span class="cx"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg>High</span></td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Very Low</span></td><td><span class="ch"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg>Low</span></td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Very Low</span></td></tr>
+        <tr><td>Old Hardware</td><td><span class="cx"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg>Poor</span></td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Great</span></td><td><span class="cx"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg>Apple Only</span></td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Excellent</span></td></tr>
+        <tr><td>Customisable</td><td><span class="ch"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 12h14"/></svg>Limited</span></td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Very High</span></td><td><span class="cx"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M18 6L6 18M6 6l12 12"/></svg>Low</span></td><td><span class="ck"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3"><path d="M5 13l4 4L19 7"/></svg>Very High</span></td></tr>
       </tbody>
     </table>
   </div>
 </section>
-</div>
 
-<section class="section" id="faq">
+<!-- FAQ -->
+<section class="sec" id="faq" style="padding-top:0">
   <div class="reveal">
-    <span class="section-tag"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3m0 4h.01"/></svg> Common Questions</span>
-    <h2 class="section-title">Frequently Asked <span class="grad-cyan">Questions</span></h2>
+    <span class="s-tag"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3m0 4h.01"/></svg>Common Questions</span>
+    <h2 class="s-title">Frequently Asked Questions</h2>
   </div>
   <div class="faq-list">
-    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--cyan)"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>What is an ISO file?</div><div class="faq-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-a">An ISO file is a complete disk image of an operating system — like a digital copy of an installation DVD. You download it once, then write it to a USB drive using Rufus or balenaEtcher to install the OS on any computer.</div></div>
-    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--cyan)"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>Will installing a new OS delete my files?</div><div class="faq-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-a">If you do a clean install (most common method), yes — it will erase everything on the selected drive. Always back up important files to an external drive or cloud storage like Google Drive or OneDrive before starting.</div></div>
-    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--cyan)"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.28"/></svg>Can I go back to Windows after installing Linux?</div><div class="faq-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-a">Yes! You can always reinstall Windows using the official Microsoft Media Creation Tool. Download the ISO from Microsoft's site, create a bootable USB, and install it the same way as any OS.</div></div>
-    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--cyan)"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Is Linux good for gaming?</div><div class="faq-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-a">Yes! Steam on Linux with Proton lets you play thousands of Windows games. Pop!_OS and Ubuntu work great with Steam. For maximum game compatibility, Windows 11 is still the top choice for serious gamers.</div></div>
-    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--cyan)"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>What USB size do I need?</div><div class="faq-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-a">For Linux distros, 8 GB is enough. For Windows 10/11, use at least 8 GB — 16 GB recommended. Use a USB 3.0 drive for much faster flashing and booting speeds.</div></div>
-    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><div class="faq-q-left"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:18px;height:18px;color:var(--cyan)"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Which Linux distro is best for beginners?</div><div class="faq-arrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" style="width:12px;height:12px"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-a">Linux Mint and Ubuntu are the best for beginners. Linux Mint looks similar to Windows making the switch easy. Ubuntu has the largest community and the most tutorials and guides available online.</div></div>
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><div class="faq-ql"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M7 21h10M12 21V3m-4 4l4-4 4 4"/></svg>What is an ISO file?</div><div class="faq-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-a">An ISO file is a complete disk image of an operating system — like a digital copy of an installation DVD. You download it once, then write it to a USB drive using Rufus or balenaEtcher to install the OS on any computer.</div></div>
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><div class="faq-ql"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M3 7v10a2 2 0 002 2h14a2 2 0 002-2V9a2 2 0 00-2-2h-6l-2-2H5a2 2 0 00-2 2z"/></svg>Will installing a new OS delete my files?</div><div class="faq-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-a">If you do a clean install (most common), yes — it erases everything on the selected drive. Always back up important files to external storage or cloud (Google Drive, OneDrive) before starting.</div></div>
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><div class="faq-ql"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.28"/></svg>Can I go back to Windows after installing Linux?</div><div class="faq-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-a">Yes! You can always reinstall Windows using the official Microsoft Media Creation Tool. Download the ISO from Microsoft's site, create a bootable USB, and install it the same way as any other OS.</div></div>
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><div class="faq-ql"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>Is Linux good for gaming?</div><div class="faq-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-a">Yes! Steam on Linux with Proton lets you play thousands of Windows games. Pop!_OS and Ubuntu work great with Steam. For maximum game compatibility, Windows 11 is still the top choice for serious gamers.</div></div>
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><div class="faq-ql"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>What USB size do I need?</div><div class="faq-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-a">For Linux distros, 8 GB is enough. For Windows 10/11, use at least 8 GB — 16 GB recommended. Always use a USB 3.0 drive for much faster flashing and booting speeds.</div></div>
+    <div class="faq-item reveal"><button class="faq-q" onclick="toggleFaq(this)"><div class="faq-ql"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10z"/></svg>Which Linux distro is best for beginners?</div><div class="faq-arrow"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg></div></button><div class="faq-a">Linux Mint and Ubuntu are both excellent for beginners. Linux Mint looks similar to Windows making the switch easy. Ubuntu has the largest community with the most tutorials and guides online.</div></div>
   </div>
 </section>
 
+<!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-top">
       <div class="footer-brand">
-        <div class="footer-logo"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="url(#fg)" stroke-width="2"><defs><linearGradient id="fg" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg> ISO Hub</div>
-        <p class="footer-tagline">Your one-stop resource for official OS downloads and step-by-step installation guides.</p>
+        <div class="footer-logo">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none"><defs><linearGradient id="fl" x1="0" y1="0" x2="24" y2="24"><stop stop-color="#00d4ff"/><stop offset="1" stop-color="#a855f7"/></linearGradient></defs><circle cx="12" cy="12" r="10" stroke="url(#fl)" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="url(#fl)"/></svg>
+          ISO Hub
+        </div>
+        <p class="footer-tag">Your one-stop resource for official OS downloads and step-by-step installation guides. All links go directly to official sources.</p>
       </div>
-      <div class="footer-links-group">
+      <div class="footer-links-wrap">
         <div class="footer-col">
           <h4>Downloads</h4>
           <a href="windows11.html">Windows 11</a>
           <a href="windows10.html">Windows 10</a>
-          <a href="ubuntu.html">Ubuntu</a>
+          <a href="ubuntu.html">Ubuntu Linux</a>
           <a href="mint.html">Linux Mint</a>
           <a href="macos.html">macOS</a>
         </div>
         <div class="footer-col">
-          <h4>Guides</h4>
-          <a href="#guide">How to Install</a>
+          <h4>Learn</h4>
+          <a href="#guide">Install Guide</a>
           <a href="#quiz">OS Quiz</a>
           <a href="#compare">Compare OS</a>
+          <a href="#distros">All Distros</a>
           <a href="#faq">FAQ</a>
-          <a href="#distros">More Distros</a>
         </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <span class="footer-copy">© 2025 ISO Hub — All downloads redirect to official sources. Not affiliated with Microsoft, Canonical, or Apple.</span>
-    </div>
+    <div class="footer-bottom">© 2025 ISO Hub — All downloads redirect to official sources. Not affiliated with Microsoft, Canonical, or Apple.</div>
   </div>
 </footer>
+
 <script src="script.js"></script>
 </body>
 </html>
