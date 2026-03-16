@@ -1,103 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Ubuntu Linux — ISO Hub</title>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet"/>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%2300d4ff' stroke-width='2'%3E%3Ccircle cx='12' cy='12' r='10'/%3E%3Ccircle cx='12' cy='12' r='3' fill='%2300d4ff'/%3E%3C/svg%3E"/>
 <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-
+<div class="particles" id="particles"></div>
+<div class="cursor-glow" id="cursorGlow"></div>
 <nav>
-  <a class="nav-logo" href="index.html">ISO Hub</a>
-  <ul class="nav-links">
-    <li><a href="index.html#os">Download</a></li>
-    <li><a href="index.html#guide">How-To Guide</a></li>
-    <li><a href="index.html#compare">Compare OS</a></li>
-    <li><a href="index.html#faq">FAQ</a></li>
-  </ul>
-  <a class="nav-cta" href="index.html">← Back Home</a>
+  <a class="nav-logo" href="index.html"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg> ISO Hub</a>
+  <ul class="nav-links"><li><a href="index.html#os">Download</a></li><li><a href="index.html#guide">How-To</a></li><li><a href="index.html#quiz">OS Quiz</a></li><li><a href="index.html#faq">FAQ</a></li></ul>
+  <div class="nav-right"><a class="nav-cta" href="index.html">← Back Home</a><button class="hamburger" id="hamburgerBtn"><span></span><span></span><span></span></button></div>
 </nav>
-
+<div class="mobile-menu" id="mobileMenu"><a href="index.html"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> Home</a><a href="index.html#os"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg> All Downloads</a><a href="index.html#guide"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle"><path d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg> Install Guide</a><a href="index.html#quiz"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg> OS Quiz</a></div>
 <div class="page-hero">
-  <div class="hero-glow"></div>
-  <div class="os-icon ubu" style="margin:0 auto 1rem">🐧</div>
+  <div class="hero-glow-1"></div>
+  <div class="os-icon-wrap ubu-icon" style="width:72px;height:72px;border-radius:18px;margin:0 auto 1.25rem;display:flex;align-items:center;justify-content:center">
+    <svg viewBox="0 0 24 24" style="width:40px;height:40px"><circle cx="12" cy="12" r="10" fill="#ff5722"/><circle cx="12" cy="12" r="3" fill="white"/><circle cx="12" cy="4" r="2" fill="white"/><circle cx="19.2" cy="16" r="2" fill="white"/><circle cx="4.8" cy="16" r="2" fill="white"/></svg>
+  </div>
   <span class="section-tag">Canonical — Official</span>
-  <h1>Ubuntu 24.04 LTS</h1>
+  <h1><span style="background:linear-gradient(90deg,#ff5722,#ff8a65);-webkit-background-clip:text;-webkit-text-fill-color:transparent">Ubuntu 24.04 LTS</span></h1>
   <p>The world's most popular Linux distribution. Free, open-source, and beginner-friendly.</p>
 </div>
-
 <div class="page-content">
   <a class="back-link" href="index.html">← Back to all downloads</a>
-
   <h2 class="section-title" style="font-size:1.5rem;margin-bottom:1rem">System Requirements</h2>
   <div class="req-grid">
-    <div class="req-card"><div class="req-icon">🧠</div><div class="req-label">RAM</div><div class="req-value">4 GB minimum</div></div>
-    <div class="req-card"><div class="req-icon">💾</div><div class="req-label">Storage</div><div class="req-value">25 GB minimum</div></div>
-    <div class="req-card"><div class="req-icon">⚡</div><div class="req-label">CPU</div><div class="req-value">2 GHz dual-core</div></div>
-    <div class="req-card"><div class="req-icon">🖥</div><div class="req-label">Display</div><div class="req-value">1024×768 minimum</div></div>
-    <div class="req-card"><div class="req-icon">🔐</div><div class="req-label">TPM</div><div class="req-value">Not required</div></div>
-    <div class="req-card"><div class="req-icon">🌐</div><div class="req-label">Internet</div><div class="req-value">Recommended</div></div>
+    <div class="req-card"><div class="req-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/></svg></div><div class="req-label">RAM</div><div class="req-value">4 GB min</div></div>
+    <div class="req-card"><div class="req-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle"><path d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"/></svg></div><div class="req-label">Storage</div><div class="req-value">25 GB min</div></div>
+    <div class="req-card"><div class="req-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div class="req-label">CPU</div><div class="req-value">2 GHz dual-core</div></div>
+    <div class="req-card"><div class="req-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div class="req-label">Display</div><div class="req-value">1024×768 min</div></div>
+    <div class="req-card"><div class="req-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg></div><div class="req-label">TPM</div><div class="req-value">Not required</div></div>
+    <div class="req-card"><div class="req-icon"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 010 20M12 2a15.3 15.3 0 000 20"/></svg></div><div class="req-label">Internet</div><div class="req-value">Recommended</div></div>
   </div>
-
-  <div class="info-box">
-    <strong>🌟 Why Ubuntu?</strong> Ubuntu 24.04 is an LTS (Long-Term Support) release, meaning it gets security updates and support until <strong>April 2029</strong>. It's the safest and most stable Ubuntu to install right now.
-  </div>
-
+  <div class="info-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><div><strong>Why Ubuntu?</strong> Ubuntu 24.04 is an LTS (Long-Term Support) release, meaning it gets security updates until <strong>April 2029</strong>. It's the safest and most stable Ubuntu to install right now.</div></div>
   <h2 class="section-title" style="font-size:1.5rem;margin:2rem 0 1rem">Download Options</h2>
   <div class="dl-options">
     <div class="dl-option">
-      <div class="dl-option-info">
-        <div class="dl-name">🖥 Ubuntu Desktop (Recommended for beginners)</div>
-        <div class="dl-detail">Full desktop experience with GNOME UI. Best for laptops and desktops. ~5.7 GB ISO file.</div>
-      </div>
-      <a class="dl-link ubu" href="https://ubuntu.com/download/desktop" target="_blank" rel="noopener">↗ Download from Ubuntu</a>
+      <div class="dl-option-left"><div class="dl-option-icon" style="background:rgba(255,87,34,.15)"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg></div><div><div class="dl-name">Ubuntu Desktop (Recommended for beginners)</div><div class="dl-detail">Full desktop experience with GNOME UI. Best for laptops and desktops. ~5.7 GB ISO file.</div></div></div>
+      <a class="dl-link ubu" href="https://ubuntu.com/download/desktop" target="_blank" rel="noopener"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg> Download from Ubuntu</a>
     </div>
     <div class="dl-option">
-      <div class="dl-option-info">
-        <div class="dl-name">⚡ Ubuntu Server Edition</div>
-        <div class="dl-detail">No desktop UI. For running servers, web hosting, and advanced users. ~2 GB ISO.</div>
-      </div>
-      <a class="dl-link ubu" href="https://ubuntu.com/download/server" target="_blank" rel="noopener">↗ Download from Ubuntu</a>
+      <div class="dl-option-left"><div class="dl-option-icon" style="background:rgba(255,87,34,.15)"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><path d="M13 10V3L4 14h7v7l9-11h-7z"/></svg></div><div><div class="dl-name">Ubuntu Server Edition</div><div class="dl-detail">No desktop UI. For servers, web hosting, and advanced users. ~2 GB ISO.</div></div></div>
+      <a class="dl-link ubu" href="https://ubuntu.com/download/server" target="_blank" rel="noopener"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg> Download from Ubuntu</a>
     </div>
     <div class="dl-option">
-      <div class="dl-option-info">
-        <div class="dl-name">🎨 Ubuntu Flavours (Different desktops)</div>
-        <div class="dl-detail">Kubuntu (KDE), Xubuntu (XFCE for old PCs), Lubuntu (very lightweight), Ubuntu MATE and more.</div>
-      </div>
-      <a class="dl-link ubu" href="https://ubuntu.com/desktop/flavours" target="_blank" rel="noopener">↗ Browse Flavours</a>
+      <div class="dl-option-left"><div class="dl-option-icon" style="background:rgba(255,87,34,.15)"><svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2" style="vertical-align:middle;margin-right:6px"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg></div><div><div class="dl-name">Ubuntu Flavours (Different desktops)</div><div class="dl-detail">Kubuntu (KDE), Xubuntu (XFCE for old PCs), Lubuntu (very lightweight), Ubuntu MATE.</div></div></div>
+      <a class="dl-link ubu" href="https://ubuntu.com/desktop/flavours" target="_blank" rel="noopener"><svg width="14" height="14" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/></svg> Browse Flavours</a>
     </div>
   </div>
-
   <h2 class="section-title" style="font-size:1.5rem;margin:2.5rem 0 1rem">How to Install Ubuntu</h2>
   <ul class="steps-list">
-    <li><div class="step-num">1</div><div class="step-text"><strong>Download</strong> the Ubuntu Desktop ISO from the official link above. It's about 5–6 GB.</div></li>
+    <li><div class="step-num">1</div><div class="step-text"><strong>Download</strong> the Ubuntu Desktop ISO from the official link above. About 5–6 GB.</div></li>
     <li><div class="step-num">2</div><div class="step-text">Download <strong>balenaEtcher</strong> (free, from etcher.balena.io) and use it to flash the ISO to your USB drive.</div></li>
-    <li><div class="step-num">3</div><div class="step-text"><strong>Back up important files.</strong> Plug in your bootable USB, restart and enter the boot menu (F12, F2, or DEL).</div></li>
-    <li><div class="step-num">4</div><div class="step-text">Select your USB from the boot menu. Ubuntu will load a <strong>live preview</strong> — you can try it before installing!</div></li>
-    <li><div class="step-num">5</div><div class="step-text">Click <strong>"Install Ubuntu"</strong>, choose your language, and select "Erase disk and install Ubuntu" for a clean install.</div></li>
-    <li><div class="step-num">6</div><div class="step-text">Set your username and password. Installation takes <strong>10–20 minutes</strong>. Restart when prompted and remove USB.</div></li>
+    <li><div class="step-num">3</div><div class="step-text"><strong>Back up important files.</strong> Plug in USB, restart and enter the boot menu (F12, F2, or DEL).</div></li>
+    <li><div class="step-num">4</div><div class="step-text">Select your USB. Ubuntu loads a <strong>live preview</strong> — you can try it before installing!</div></li>
+    <li><div class="step-num">5</div><div class="step-text">Click <strong>"Install Ubuntu"</strong> and select "Erase disk and install Ubuntu" for a clean install.</div></li>
+    <li><div class="step-num">6</div><div class="step-text">Set username and password. Installation takes <strong>10–20 minutes</strong>. Restart when prompted.</div></li>
   </ul>
-
-  <div class="info-box" style="margin-top:2rem">
-    <strong>💡 Tip:</strong> Ubuntu's live mode lets you try the OS without installing anything. Click "Try Ubuntu" on the first screen to test it out before committing to install it.
-  </div>
+  <div class="info-box"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><div><strong>Tip:</strong> Ubuntu's live mode lets you try the OS without installing anything. Click "Try Ubuntu" on the first screen to test before committing.</div></div>
 </div>
-
-<footer>
-  <div class="footer-logo">ISO Hub</div>
-  <p class="footer-text">Your one-stop resource for official OS downloads and installation guides.</p>
-  <div class="footer-links">
-    <a href="index.html">Home</a>
-    <a href="windows11.html">Windows 11</a>
-    <a href="windows10.html">Windows 10</a>
-    <a href="ubuntu.html">Ubuntu</a>
-    <a href="mint.html">Linux Mint</a>
-    <a href="macos.html">macOS</a>
-  </div>
-  <div class="footer-bottom">© 2025 ISO Hub — Downloads redirect to official sources. Not affiliated with Canonical.</div>
-</footer>
+<footer><div class="footer-inner"><div class="footer-bottom"><span class="footer-copy">© 2025 ISO Hub — Downloads redirect to official sources. Not affiliated with Canonical.</span></div></div></footer>
 <script src="script.js"></script>
-</body>
-</html>
+</body></html>
